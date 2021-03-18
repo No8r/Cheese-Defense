@@ -271,6 +271,7 @@ function cannonsShop(name, page)
     if imgs[name][2] then TFM.removeImage(imgs[name][2]) imgs[name][1] = nil end
     imgs[name][1] = TFM.addImage("17828b4085e.png", ":1", x - (260/2), y - (245/2))
     imgs[name][2] = TFM.addImage(cannon[1], ":2", x + cannon[2] + 25 , y + cannon[3] - 45)
+    ui.removeTextArea(10002, name)
     addTextArea(10000, "<font size='20'><p align='center'><a href='event:closeShop'> \n \n \n \n ", name, x + 90, y - 120, 30, 30, 0x01, 0x0909, 0, true)
     addTextArea(10001, "<font size='13' color = '#2f2e38'><p align='center'><a href='event:buyCannon_"..page.."'>Buy", name, x - 25,  y + 60, 100, 25, 0xFFBA25, 0xFFBA25,0, true)      
     addTextArea(10003, "<font size='15' color = '#2f2e38'><p align='center'><b>" .. data[name].coins, name, x - 100 , y - 75, 40, 25, 0xFFBA25, 0xFFBA25,0, true)
